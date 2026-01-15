@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XPOSE - Egypt's Digital Media Marketplace</title>
+    <meta name="description" content="Connect with TV channels, influencers, billboards, events & talent. Book exposure opportunities seamlessly with escrow-protected payments.">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo-container">
+                <img src="https://i.ibb.co/m5x4CYG/xpose-logo.png" alt="XPOSE Logo" class="logo-img" onerror="this.style.display='none'">
+                <span class="logo-text">XPOSE</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#categories">Categories</a></li>
+                <li><a href="#how-it-works">How It Works</a></li>
+                <li><a href="#suppliers">Suppliers</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="btn-login" onclick="openLoginModal('client')">Client Login</button>
+                <button class="cta-button" onclick="openLoginModal('supplier')">Supplier Login</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Egypt's Digital Media Marketplace</h1>
+                <p>Connect with TV channels, influencers, billboards, events & talent. Book exposure opportunities seamlessly with escrow-protected payments.</p>
+                <div class="hero-buttons">
+                    <button class="cta-button" onclick="scrollToSection('categories')">
+                        <i class="fas fa-search"></i> Browse Categories
+                    </button>
+                    <button class="btn-login" style="padding: 12px 30px;" onclick="openLoginModal('supplier')">
+                        <i class="fas fa-store"></i> Become a Supplier
+                    </button>
+                </div>
+            </div>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <div class="stat-number">500+</div>
+                    <div class="stat-label">Media Partners</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">50M+</div>
+                    <div class="stat-label">Reach Potential</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">Secure Escrow</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">24/7</div>
+                    <div class="stat-label">Support</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Slider -->
+    <section class="categories-section" id="categories">
+        <div class="section-header">
+            <h2>Explore Categories</h2>
+            <p>Discover the perfect media exposure opportunity for your brand</p>
+        </div>
+        <div class="categories-slider-container">
+            <button class="slider-nav prev" onclick="slideCategories('prev')"><i class="fas fa-chevron-left"></i></button>
+            <div class="categories-slider" id="categoriesSlider">
+                <div class="category-card">
+                    <div class="category-icon"><i class="fas fa-tv"></i></div>
+                    <h3>TV Channels</h3>
+                    <p>Advertise on Egypt's top TV channels with flexible packages</p>
+                    <span class="category-count">150+ Channels</span>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon"><i class="fas fa-users"></i></div>
+                    <h3>Social Media Influencers</h3>
+                    <p>Connect with influencers across Instagram, TikTok, YouTube</p>
+                    <span class="category-count">2,000+ Influencers</span>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon"><i class="fas fa-ad"></i></div>
+                    <h3>Billboards & OOH</h3>
+                    <p>Premium billboard locations across Cairo and major cities</p>
+                    <span class="category-count">500+ Locations</span>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon"><i class="fas fa-calendar-star"></i></div>
+                    <h3>Events & Sponsorships</h3>
+                    <p>Sponsor concerts, festivals, conferences and exhibitions</p>
+                    <span class="category-count">300+ Events</span>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon"><i class="fas fa-microphone"></i></div>
+                    <h3>Talent Booking</h3>
+                    <p>Book celebrities, singers, hosts for your events</p>
+                    <span class="category-count">200+ Talents</span>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon"><i class="fas fa-broadcast-tower"></i></div>
+                    <h3>Radio Stations</h3>
+                    <p>Reach audiences through Egypt's popular radio stations</p>
+                    <span class="category-count">80+ Stations</span>
+                </div>
+            </div>
+            <button class="slider-nav next" onclick="slideCategories('next')"><i class="fas fa-chevron-right"></i></button>
+        </div>
+    </section>
+
+    <!-- Featured Suppliers -->
+    <section class="featured-section" id="suppliers">
+        <div class="section-header">
+            <h2>Featured Media Partners</h2>
+            <p>Trusted by Egypt's leading media and entertainment brands</p>
+        </div>
+        <div class="suppliers-grid">
+            <div class="supplier-card">
+                <div class="supplier-logo">
+                    <img src="https://i.ibb.co/twT8m0DY/elshams-channel.png" alt="Elshams Channel" onerror="this.parentElement.innerHTML='<i class=\'fas fa-tv\' style=\'font-size:60px;color:var(--primary-cyan)\'></i>'">
+                </div>
+                <div class="supplier-info">
+                    <h3 class="supplier-name">Elshams TV</h3>
+                    <div class="supplier-category"><i class="fas fa-tv"></i> TV Channel</div>
+                    <p>Premium entertainment and drama content reaching millions across Egypt</p>
+                    <div class="supplier-stats">
+                        <span class="supplier-stat"><i class="fas fa-eye"></i> 5M+ Viewers</span>
+                        <span class="supplier-stat"><i class="fas fa-star"></i> 4.8 Rating</span>
+                    </div>
+                </div>
+            </div>
+            <div class="supplier-card">
+                <div class="supplier-logo">
+                    <img src="https://i.ibb.co/m5LTF9QZ/cbc-sofra.png" alt="CBC Sofra" onerror="this.parentElement.innerHTML='<i class=\'fas fa-tv\' style=\'font-size:60px;color:var(--primary-cyan)\'></i>'">
+                </div>
+                <div class="supplier-info">
+                    <h3 class="supplier-name">CBC Sofra</h3>
+                    <div class="supplier-category"><i class="fas fa-tv"></i> TV Channel</div>
+                    <p>Egypt's #1 cooking and lifestyle channel for food brands and culinary businesses</p>
+                    <div class="supplier-stats">
+                        <span class="supplier-stat"><i class="fas fa-eye"></i> 3M+ Viewers</span>
+                        <span class="supplier-stat"><i class="fas fa-star"></i> 4.9 Rating</span>
+                    </div>
+                </div>
+            </div>
+            <div class="supplier-card">
+                <div class="supplier-logo">
+                    <div style="font-size: 48px;">👤</div>
+                </div>
+                <div class="supplier-info">
+                    <h3 class="supplier-name">Sarah El-Masry</h3>
+                    <div class="supplier-category"><i class="fas fa-instagram"></i> Fashion Influencer</div>
+                    <p>Fashion and lifestyle content creator with highly engaged Egyptian audience</p>
+                    <div class="supplier-stats">
+                        <span class="supplier-stat"><i class="fas fa-users"></i> 850K Followers</span>
+                        <span class="supplier-stat"><i class="fas fa-star"></i> 4.7 Rating</span>
+                    </div>
+                </div>
+            </div>
+            <div class="supplier-card">
+                <div class="supplier-logo">
+                    <div style="font-size: 48px;">👤</div>
+                </div>
+                <div class="supplier-info">
+                    <h3 class="supplier-name">Ahmed Fitness</h3>
+                    <div class="supplier-category"><i class="fas fa-youtube"></i> Fitness Creator</div>
+                    <p>Health and wellness influencer inspiring active lifestyles across MENA</p>
+                    <div class="supplier-stats">
+                        <span class="supplier-stat"><i class="fas fa-users"></i> 1.2M Followers</span>
+                        <span class="supplier-stat"><i class="fas fa-star"></i> 4.9 Rating</span>
+                    </div>
+                </div>
+            </div>
+            <div class="supplier-card">
+                <div class="supplier-logo">
+                    <i class="fas fa-building" style="font-size: 60px; color: var(--primary-cyan);"></i>
+                </div>
+                <div class="supplier-info">
+                    <h3 class="supplier-name">Cairo Premium Billboards</h3>
+                    <div class="supplier-category"><i class="fas fa-ad"></i> Outdoor Advertising</div>
+                    <p>Prime billboard locations on Cairo's busiest highways and districts</p>
+                    <div class="supplier-stats">
+                        <span class="supplier-stat"><i class="fas fa-map-marker-alt"></i> 120 Locations</span>
+                        <span class="supplier-stat"><i class="fas fa-star"></i> 4.6 Rating</span>
+                    </div>
+                </div>
+            </div>
+            <div class="supplier-card">
+                <div class="supplier-logo">
+                    <i class="fas fa-calendar-check" style="font-size: 60px; color: var(--primary-cyan);"></i>
+                </div>
+                <div class="supplier-info">
+                    <h3 class="supplier-name">Nile Events & Conferences</h3>
+                    <div class="supplier-category"><i class="fas fa-calendar-star"></i> Event Management</div>
+                    <p>Egypt's leading event organizer for corporate and entertainment events</p>
+                    <div class="supplier-stats">
+                        <span class="supplier-stat"><i class="fas fa-calendar"></i> 50+ Events/Year</span>
+                        <span class="supplier-stat"><i class="fas fa-star"></i> 4.8 Rating</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Journey -->
+    <section class="booking-journey" id="how-it-works">
+        <div class="section-header">
+            <h2>How XPOSE Works</h2>
+            <p>Simple, secure, and transparent booking process</p>
+        </div>
+        <div class="journey-steps">
+            <div class="journey-step">
+                <div class="step-number"><i class="fas fa-search"></i></div>
+                <h3>Browse & Discover</h3>
+                <p>Explore thousands of media opportunities across TV, influencers, billboards, events, and talent</p>
+            </div>
+            <div class="journey-step">
+                <div class="step-number"><i class="fas fa-shopping-cart"></i></div>
+                <h3>Book & Pay</h3>
+                <p>Select your package, confirm dates and details. Payment held securely in escrow</p>
+            </div>
+            <div class="journey-step">
+                <div class="step-number"><i class="fas fa-video"></i></div>
+                <h3>Get Exposure</h3>
+                <p>Supplier delivers your campaign. Track performance and engagement in real-time</p>
+            </div>
+            <div class="journey-step">
+                <div class="step-number"><i class="fas fa-check-circle"></i></div>
+                <h3>Confirm & Release</h3>
+                <p>Review deliverables. Once approved, payment automatically released to supplier</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials-section" id="testimonials">
+        <div class="section-header">
+            <h2>What Our Clients Say</h2>
+            <p>Join hundreds of businesses growing through XPOSE</p>
+        </div>
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <div class="testimonial-header">
+                    <div class="testimonial-avatar">MS</div>
+                    <div class="testimonial-author">
+                        <h4>Mohamed Salah</h4>
+                        <div class="testimonial-role">Marketing Director, Tech Startup</div>
+                    </div>
+                </div>
+                <div class="testimonial-rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p class="testimonial-text">"XPOSE transformed how we book media. We went from weeks of negotiations to booking TV spots in minutes. The escrow system gives us complete peace of mind. Our brand visibility increased by 300% in just 3 months!"</p>
+            </div>
+            <div class="testimonial-card">
+                <div class="testimonial-header">
+                    <div class="testimonial-avatar">FA</div>
+                    <div class="testimonial-author">
+                        <h4>Fatma Ahmed</h4>
+                        <div class="testimonial-role">CEO, Fashion Brand</div>
+                    </div>
+                </div>
+                <div class="testimonial-rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p class="testimonial-text">"Finding the right influencers used to be a nightmare. XPOSE made it so easy - we found 10 perfect matches in one day. The transparent pricing and secure payments made everything professional and hassle-free."</p>
+            </div>
+            <div class="testimonial-card">
+                <div class="testimonial-header">
+                    <div class="testimonial-avatar">KH</div>
+                    <div class="testimonial-author">
+                        <h4>Karim Hassan</h4>
+                        <div class="testimonial-role">Events Manager, Corporate</div>
+                    </div>
+                </div>
+                <div class="testimonial-rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p class="testimonial-text">"We've booked 5 major events through XPOSE this year. The platform is incredibly professional, and having everything in one place - from venue to talent booking - saves us countless hours. Highly recommended!"</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="cta-content">
+            <h2>Ready to Amplify Your Brand?</h2>
+            <p>Join Egypt's fastest-growing media marketplace and connect with millions of potential customers</p>
+            <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+                <button class="cta-button" onclick="openLoginModal('client')">Start Booking Now</button>
+                <button class="btn-login" style="padding: 12px 30px;" onclick="openLoginModal('supplier')">Become a Supplier</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3>XPOSE</h3>
+                <p>Egypt's Digital Media Marketplace connecting brands with TV channels, influencers, billboards, events, and talent.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h4>Categories</h4>
+                <ul>
+                    <li><a href="#categories">TV Channels</a></li>
+                    <li><a href="#categories">Influencers</a></li>
+                    <li><a href="#categories">Billboards</a></li>
+                    <li><a href="#categories">Events</a></li>
+                    <li><a href="#categories">Talent Booking</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#how-it-works">How It Works</a></li>
+                    <li><a href="#pricing">Pricing</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#careers">Careers</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Support</h4>
+                <ul>
+                    <li><a href="#help">Help Center</a></li>
+                    <li><a href="#terms">Terms of Service</a></li>
+                    <li><a href="#privacy">Privacy Policy</a></li>
+                    <li><a href="#safety">Trust & Safety</a></li>
+                    <li><a href="#escrow">Escrow System</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 XPOSE. All rights reserved. Egypt's Digital Media Marketplace.</p>
+        </div>
+    </footer>
+
+    <!-- Login Modal -->
+    <div class="modal" id="loginModal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeLoginModal()">&times;</button>
+            <div class="login-tabs">
+                <button class="login-tab active" id="clientTab" onclick="switchTab('client')">Client Login</button>
+                <button class="login-tab" id="supplierTab" onclick="switchTab('supplier')">Supplier Login</button>
+            </div>
+            
+            <!-- Client Login Form -->
+            <form class="login-form active" id="clientForm" onsubmit="handleSubmit(event, 'Client')">
+                <h2 style="margin-bottom: 30px; font-size: 28px;">Welcome Back, Client</h2>
+                <div class="form-group">
+                    <label>Email Address</label>
+                    <input type="email" placeholder="you@example.com" required>
+                </div>
+                <div class="form-group">
+                    <label>Password</label>
+                    <input type="password" placeholder="Enter your password" required>
+                </div>
+                <button type="submit" class="btn-submit">Login to Book</button>
+                <div class="form-footer">
+                    Don't have an account? <a href="#signup">Sign up as Client</a>
+                </div>
+            </form>
+
+            <!-- Supplier Login Form -->
+            <form class="login-form" id="supplierForm" onsubmit="handleSubmit(event, 'Supplier')">
+                <h2 style="margin-bottom: 30px; font-size: 28px;">Supplier Portal</h2>
+                <div class="form-group">
+                    <label>Business Email</label>
+                    <input type="email" placeholder="business@example.com" required>
+                </div>
+                <div class="form-group">
+                    <label>Password</label>
+                    <input type="password" placeholder="Enter your password" required>
+                </div>
+                <button type="submit" class="btn-submit">Login to Dashboard</button>
+                <div class="form-footer">
+                    Want to join? <a href="#apply">Apply as Supplier</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
